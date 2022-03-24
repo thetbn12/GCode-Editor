@@ -1,4 +1,6 @@
 """
+
+Hello things
 Git repository: https://github.com/thetbn12/GCode-Editor
 
 HOW TO USE:
