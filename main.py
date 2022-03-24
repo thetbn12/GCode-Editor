@@ -90,7 +90,7 @@ def consoleOut(numRead, numWrite):
 for nextLine in readFile:
     lineCountRead += 1
     # -------------------------------------------------------------------------
-    if nextLine.find("END"):
+    if nextLine.find("END LAYER") >= 0:
 
         # Comment this line out if the flag line doesn't have G-Code
         writeFile.write(writeWithNum(nextLine, lineCountWrite))
