@@ -20,6 +20,7 @@ print("")
 
 readFile = open(readFileName)
 writeFile = open(writeFileName, "w")
+writeFile.write("; EDITED\n\n")
 
 # =============================================================================
 """
