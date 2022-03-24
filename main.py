@@ -1,4 +1,6 @@
 """
+Git repository: https://github.com/thetbn12/GCode-Editor
+
 HOW TO USE:
 Drag and drop G-Code file into the same folder as this program.
 Run the program.
