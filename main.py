@@ -33,8 +33,6 @@ NOTES:
 - Don't forget the comma at the end of the line!
 """
 deleteLinesWith = [
-    "N40",
-    "N45",
     ";(ORGX58=0,ORGY58=0,ORGZ58=0)",
     "G43",
 ]
@@ -65,6 +63,7 @@ NOTES:
 """
 replaceCodes = {
     "M3": "M3 M7",
+    "G53": "",
 }
 # =============================================================================
 layerNumber = 0
@@ -85,7 +84,8 @@ def writeWithNum(string, num):
 # -----------------------------------------------------------------------------
 def consoleOut(numRead, numWrite):
     print("Edited read file line " + str(numRead) + " to write file line "
-          + str(int((numWrite - 5) / 5)))
+          + str(2 + int((numWrite - 5) / 5))) 
+    # the +2 accounts for the edit lines 
 # -----------------------------------------------------------------------------
 
 for nextLine in readFile:
