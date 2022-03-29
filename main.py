@@ -34,7 +34,7 @@ NOTES:
 """
 deleteLinesWith = [
     ";(ORGX58=0,ORGY58=0,ORGZ58=0)",
-    "G43",
+    "G43", "G58", "C0."
 ]
 # =============================================================================
 """
@@ -62,8 +62,11 @@ NOTES:
 - Don't forget the comma at the end of the line!
 """
 replaceCodes = {
-    "M3": "M3 M7",
-    "G53": "",
+    #"M3": "M3 M7",
+    #"M5": "M5 M9",
+    "G53": "G54",
+    "D1": "D2"
+    
 }
 # =============================================================================
 layerNumber = 0
@@ -91,7 +94,7 @@ def consoleOut(numRead, numWrite):
 for nextLine in readFile:
     lineCountRead += 1
     # -------------------------------------------------------------------------
-    if nextLine.find("LAYER END") >= 0:
+    '''if nextLine.find("LAYER END") >= 0:
 
         # Comment this line out if the flag line doesn't have G-Code
         writeFile.write(writeWithNum(nextLine, lineCountWrite))
@@ -116,6 +119,7 @@ for nextLine in readFile:
         editCount += 1
         layerNumber += 1
         continue;
+        '''
     # -------------------------------------------------------------------------
     deleteLine = False
     for deleteEntry in deleteLinesWith:
